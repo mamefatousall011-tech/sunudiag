@@ -1,6 +1,7 @@
 """SunuDiag - API REST servant le modèle paludisme (Lab 2)."""
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 import joblib
 import pandas as pd
@@ -13,6 +14,13 @@ app = FastAPI(
         "Un pré-diagnostic n'est pas un diagnostic médical."
     ),
     version="2.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
