@@ -3,8 +3,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+from fastapi.staticfiles import StaticFiles
 import joblib
 import pandas as pd
+
 
 
 app = FastAPI(
@@ -102,3 +104,5 @@ def predict(patient: Patient):
         ),
         "avertissement": "Ne remplace pas un avis médical.",
     }
+    
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
