@@ -8,6 +8,8 @@ Elle permet de saisir les informations d'un patient et d'obtenir une estimation 
 
 > ⚠️ **Avertissement :** SunuDiag est un outil pédagogique de pré-diagnostic. Il ne remplace jamais l'avis, l'examen ou le diagnostic d'un professionnel de santé.
 
+voici l'URL : https://sunudiag-11r5.onrender.com
+
 ## Fonctionnalités
 
 - Saisie de l'âge du patient
